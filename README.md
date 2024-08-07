@@ -1,4 +1,4 @@
-# WebSmash
+# WebSmash: Should you judge based on looks? No. Can you? Yes.
 This is a simple python script that gets information from a website and allows you to scrap it and retrieve information. The original test scenario was to retrieve cat pictures from Reddit and let you rank which is the best breed and show information afterwards. In the modified repo, the source containers for images and metadata have bene changed so that the user can obtain information from potentially any website. 
 
 In some test scenarios, some of my friends used it to retrieve information from dating websites and went so far as to suggest "DateSmash" but I think this script runs well for anything. But the core container in this code is of that version of implementation, so it contains "profile-cards" to retrieve instead of an arbitrary placeholder. I will leave it up to you to decide what you want to use it for, however I will not be responsible for any ethical, moral or toxic relationship liabilities that you might induce on yourself. This is only meant to be a scraper for educational purposes and I request that it be limited to that.
