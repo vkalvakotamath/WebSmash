@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Rated Paper | arXiv Comparator</title>
+
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        
+        h1 {
+            background: #821b1b;
+            padding: 20px 0;
+            text-align: center;
+            color: #ffffff;
+        }
+        h3 {
+            text-align: center;
+        }
+        .winner-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+        }
+        
+        .winner-info {
+            margin-bottom: 20px;
+        }
+        
+        .winner-abstract {
+            margin-top: 20px;
+        }
+        
+        .buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .buttonl {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #ff0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        </style>
+</head>
+<body>
+    <h1>Top Rated Paper | arXiv Comparator</h1>
+    <!-- <h2>{{ paper.title }}</h2>
+    <p>Authors: {{ paper.authors|join(', ') }}</p>
+    <p>Final Score: {{ score|round|int }}</p>
+    <p>{{ paper.summary }}</p> -->
+
+    <div class="winner-container">
+        <h2>{{ paper.title }}</h2>
+        
+        <div class="winner-info">
+            <p><strong>Authors:</strong> {{ paper.authors|join(', ') }}</p>
+            <p><strong>Final Score:</strong> {{ score|round|int }}</p>
+        </div>
+    
+        <div class="winner-abstract">
+            <h3>Abstract:</h3>
+            <p>{{ paper.summary }}</p>
+        </div>
+    </div>
+
+    <!-- <a href="{{ paper.pdf_url }}" target="_blank">View PDF</a>
+    <a href="{{ url_for('restart') }}">Restart Rating</a> -->
+
+
+    <div class="buttons">
+        <a href="{{ paper.pdf_url }}" target="_blank" class="button">View PDF</a>
+        <a href="{{ url_for('restart') }}" class="button">Restart Rating</a>
+    </div>
+
+
+
+
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    MathJax.typesetPromise().catch((err) => console.log(err));
+  });
+</script>
+
+<div style="text-align: right; padding: 10px;">
+    <a href="{{ url_for('about') }}" class="buttonl">About</a>
+</body>
+</html>

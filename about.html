@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About WebSmash</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f0f8ff;
+    }
+
+    .parastuff {
+        font-size: 20px;
+    }
+    h1 {
+        background: #821b1b;
+        padding: 20px 0;
+        text-align: center;
+        color: #ffffff;
+    }
+    h3 {
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About WebSmash</h1>
+        <br>
+        <div class="parastuff">
+        <p>
+            WebSmash is a portmanteau of FaceMash by Mark Zuckerberg and my original title, WebScrape. The idea is simple: you compare two things, rank them, and find out the best-fit. In v.0.2, which is what this is, you get to either choose arXiv-comparator, where you choose between arXiv papers from that day in one of the physics listings (others will be added soon), or local-comparator, where you add in pictures and information by yourself using some scraper script.
+
+            </p>
+
+            <p>
+            The best use case that I strangely found for the local-comparator that a few of my friends suggested is what they dub "DateSmash", where you run the WebSmash.py script I provided on the GitHub repository page (<a href="https://github.com/vkalvakotamath/WebSmash">WebSmash | Github</a>) for dating websites and basically retrieve profile pictures and information. You can then choose purely on the looks and then the winning profile displays the information. If you don't like it, you start over again by excluding the profile. It is still work-in-progress, but 
+            I realised this is cool for my autistic douchebag friends who are willing to tweak python scripts instead of actually going out and meeting people. Sigh, I have no interest in all these things. So knock yourself out for what it's worth!!
+        </p>
+
+        <p>
+            -- V
+        </p>
+        <br>
+        <br>
+        <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
