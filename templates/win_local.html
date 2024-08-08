@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Match | WebSmash</title>
+    <link rel="icon" type="image/png" href="/templates/dfm.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .winner-container {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .winner-image {
+            max-width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+        .winner-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .winner-score {
+            font-size: 18px;
+        }
+        .restart-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .restart-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Best Match | WebSmash</h1>
+    <div class="winner-container">
+        <img src="/Profiles/{{ winner[0] }}" alt="{{ winner[0] }}" class="winner-image">
+        <div class="winner-name">{{ winner[0].split('/')[-1] }}</div>
+        <div class="winner-score">Final Score: {{ winner[1]|round|int }}</div>
+        <div class="winner-info">
+            <h3>About:</h3>
+            <pre>{{ txt_content }}</pre>
+        </div>
+    </div>
+    <button class="restart-button" onclick="window.location.href='/restart'">Restart Ranking</button>
+
+
+    <div style="text-align: right; padding: 10px;">
+        <a href="{{ url_for('about') }}" class="button">About</a>
+
+</body>
+</html>
